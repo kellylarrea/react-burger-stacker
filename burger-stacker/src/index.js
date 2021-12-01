@@ -4,20 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-let ingredients = [
-  {name: 'Kaiser Bun', color: 'saddlebrown'},
-  {name: 'Lettuce Wrap', color: 'olivedrab'},
-  {name: 'Beef Patty', color: '#3F250B'},
-  {name: 'Soy Patty', color: '#3F250B'},
-  {name: 'Lettuce', color: 'lawngreen'},
-  {name: 'Tomato', color: 'tomato'},
-  {name: 'Bacon', color: 'maroon'},
-  {name: 'Onion', color: 'lightyellow'}
-  ]
-
 ReactDOM.render(
   <React.StrictMode>
-    <App burgerIngredients={ingredients}/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

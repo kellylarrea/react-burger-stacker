@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import IngredientList from './IngredientList'
+import BurgerStacker from './components/BurgerStacker';
+// import IngredientList from './IngredientList'
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-        <IngredientList />
+        <BurgerStacker />
         </div>
 
       </header>
