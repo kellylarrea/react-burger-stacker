@@ -49,27 +49,22 @@ const BurgerStacker = () => {
         let ingName = e.target.innerText
         //setState will do one thing reset burger ingredient
         //... spread operator add this stuff on top of everything else that is already there
-        setBurgerIngredients({
-            burgerIngredients: [{ name: ingName, color: ingColor },
+        setBurgerIngredients([{ name: ingName, color: ingColor },
             ...burgerIngredients],
-        })
+        )
     }
 
     //remove from stack
 
     const removeFromStack = (e) => {
         // console.log('old stack', this.state.burgerIngredients)
-        let newBurgIngArr = ingredients.filter(ingrs => ingrs.name != e.target.innerText)
+        let newBurgIngArr = burgerIngredients.filter(ingrs => ingrs.name != e.target.innerText)
         // console.log('new stack', newBurgIngArr)
-        setBurgerStacker({
-            burgerIngredients: newBurgIngArr
-        })
+        setBurgerStacker(newBurgIngArr)
     }
     // clear burger stack function(maybe passed to child?)
     const clearBurger = () => {
-        setBurgerStacker({
-            burgerIngredients: []
-        })
+        setBurgerIngredients([])
     }
 
     // render()

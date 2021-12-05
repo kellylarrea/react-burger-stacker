@@ -4,10 +4,10 @@ import Ingredient from './Ingredient'
 // we'll also want something that clears the burger
 
 const BurgerPane = props => {
-    const [ingredients, setIngredients] = useState(null)
+    // console.log('ingredients', props.ingredients)
     // we want to loop over the burgerbits that user has added
     // display one Ingredient component for every bit of the burger
-        let burgerBits = ingredients.map(mapIngredient => (
+        let burgerBits = props.ingredients.map(mapIngredient => (
             <Ingredient ingredient={mapIngredient} clicky={props.remove}/>
         ))
         return (
